@@ -34,10 +34,12 @@
             // 
             // pictureBoxMain
             // 
+            pictureBoxMain.BackColor = Color.Black;
             pictureBoxMain.Dock = DockStyle.Fill;
             pictureBoxMain.Location = new Point(0, 0);
             pictureBoxMain.Name = "pictureBoxMain";
             pictureBoxMain.Size = new Size(800, 450);
+            pictureBoxMain.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMain.TabIndex = 0;
             pictureBoxMain.TabStop = false;
             // 
@@ -46,11 +48,16 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            ControlBox = false;
             Controls.Add(pictureBoxMain);
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Slideshow";
             WindowState = FormWindowState.Maximized;
+            Load += FormMain_Load;
+            KeyPress += FormMain_KeyPress;
             ((System.ComponentModel.ISupportInitialize)pictureBoxMain).EndInit();
             ResumeLayout(false);
         }
