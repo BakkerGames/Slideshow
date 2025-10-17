@@ -57,7 +57,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             WindowState = FormWindowState.Maximized;
             Load += FormMain_Load;
-            KeyPress += FormMain_KeyPress;
+            KeyDown += FormMain_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBoxMain).EndInit();
             ResumeLayout(false);
         }
